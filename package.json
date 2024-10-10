@@ -1,0 +1,38 @@
+{
+  "name": "express-sqlite-api",
+  "version": "1.0.0",
+  "description": "Express SQLite API",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon -L ./src/server.js",
+    "gen:migrations": "drizzle-kit generate --name init",
+    "run:migrations": "node ./src/migrate.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "@types/uuid": "^10.0.0",
+    "drizzle-kit": "^0.24.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-import": "^2.30.0",
+    "nodemon": "^3.1.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.2.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.33.0",
+    "express": "^4.21.0",
+    "pino": "^9.4.0",
+    "pino-pretty": "^11.2.2",
+    "uuid": "^10.0.0"
+  },
+  "author": "MikeTeddyOmondi",
+  "license": "MIT"
+}
