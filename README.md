@@ -1,11 +1,10 @@
-# Express LibSQL(~~sqlite~~) API
+# Express PGlite API
 
-This application uses [libsql](https://github.com/tursodatabase/libsql/) (a fork of sqlite)
+This application uses [PGlite](https://github.com/electric-sql/pglite) (Postgres powered by WASM)
 
-Generate schema in sqlite database
+Generate schema in PGlite database
 
 ```shell
-# pnpx drizzle-kit generate:sqlite
 pnpm generate:migrations 
 ```
 
