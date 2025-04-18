@@ -10,7 +10,9 @@ import {
 } from "./controllers/tasks.js";
 import {
   checkFileUpload,
+  generateDownloadUrl,
   generatePresignedUrl,
+  getFiles,
 } from "./controllers/s3Bucket.js";
 
 const routes = express.Router();
@@ -30,5 +32,9 @@ routes.delete("/tasks/:pid", deleteTask);
 routes.get("/generate-presigned-url/", generatePresignedUrl);
 
 routes.get("/check-file-upload/:filename", checkFileUpload);
+
+routes.get("/get-files", getFiles);
+
+routes.get("/generate-download-url", generateDownloadUrl);
 
 export default routes;
